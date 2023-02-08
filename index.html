@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>CRUD</title>
+</head>
+<body>
+    <!-- CRUD
+    create retieve update delete -->
+    <div class="form shadow py-3 px-4 my-5 w-75 mx-auto">
+        <h1>Product management system</h1>
+        <div class="form-group mt-4">
+            <label for="name" class="mb-3">Name</label>
+            <input type="text" id="name" class="form-control mb-4">
+        </div>
+        <div class="form-group">
+            <label for="price" class="mb-3">Price</label>
+            <input type="number" id="price" class="form-control mb-4">
+        </div>
+        <div class="form-group">
+            <label for="type" class="mb-3">Type</label>
+            <input type="text" id="type" class="form-control mb-4">
+        </div>
+        <div class="form-group">
+            <label for="description" class="mb-3">Description</label>
+            <textarea name="description" id="description" class="form-control mb-4"></textarea>
+        </div>
+        <div class="button" id="addButton">
+            <button onclick="addProduct()" class="btn btn-dark" >ADD</button>
+        </div>
+        
+        <div class="form-group mt-5">
+            <h1>Search...</h1>
+            <!-- this ==هوه هوه==> document.getElementById("search") -->
+            <input type="text" oninput="searchByName(this.value)" class="form-control" id="search">
+        </div>
+    </div>
+    <table class="table shadow text-center w-75 mx-auto table-striped" id="table">
+        <thead>
+            <th>index</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Type</th>
+            <th>Desc</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </thead>
+        <tbody id="body">
+            
+        </tbody>
+    </table>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
